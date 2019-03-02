@@ -469,7 +469,7 @@ service charger /charger
 service thermald /system/vendor/bin/thermald
     class main
     user root
-    group radio system
+    group root
 
 on property:wlan.driver.status=ok
     # Wifi firmware reload path

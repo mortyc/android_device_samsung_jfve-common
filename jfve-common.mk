@@ -278,9 +278,8 @@ PRODUCT_PACKAGES += \
 
 # Thermal
 PRODUCT_COPY_FILES += \
-    $(COMMON_PATH)/configs/thermald-8064.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermald-8064.conf \
-    $(COMMON_PATH)/configs/thermald-8064ab.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermald-8064ab.conf \
-    $(COMMON_PATH)/configs/thermald-8064ab.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermald.conf
+    $(COMMON_PATH)/configs/thermald-8064.conf:system/vendor/etc/thermald-8064.conf \
+    $(COMMON_PATH)/configs/thermald-8064ab.conf:system/vendor/etc/thermald-8064ab.conf
 
 # USB
 PRODUCT_PACKAGES += \
