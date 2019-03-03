@@ -1,0 +1,2 @@
+allow toolbox mdm_device:chr_file read;
+allow toolbox sysfs:file { open read };
