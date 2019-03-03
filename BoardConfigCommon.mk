@@ -99,7 +99,7 @@ BOARD_CHARGING_CMDLINE_VALUE := "true"
 BOARD_CHARGER_ENABLE_SUSPEND := true
 
 # LineageHW
-BOARD_HARDWARE_CLASS += $(COMMON_PATH)/lineagehw
+JAVA_SOURCE_OVERLAYS := org.lineageos.hardware|$(COMMON_PATH)/lineagehw|**/*.java
 
 # Display
 # SF_START_GRAPHICS_ALLOCATOR_SERVICE := true
