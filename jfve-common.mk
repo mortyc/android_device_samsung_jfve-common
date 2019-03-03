@@ -256,7 +256,11 @@ PRODUCT_COPY_FILES += \
 
 # Sensors
 PRODUCT_PACKAGES += \
-    android.hardware.sensors@1.0-impl
+    android.hardware.sensors@1.0-impl.jf \
+    android.hardware.sensors@1.0-service.jf
+
+PRODUCT_COPY_FILES += \
+    $(COMMON_PATH)/configs/_hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/_hals.conf
 
 # SPN override
 PRODUCT_COPY_FILES += \
