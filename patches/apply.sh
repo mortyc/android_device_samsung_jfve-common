@@ -11,4 +11,3 @@ if [ -n "$(find $dir -name \*.patch -type f)" ]; then
     echo ""
     find . -name "*.orig" -delete
 fi
-
