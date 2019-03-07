@@ -18,13 +18,14 @@
 #include <string.h>
 #include <fcntl.h>
 
-#define LOG_TAG "PowerHAL_TR_Ext"
+#define LOG_TAG "PowerHAL_K_Ext"
 #include <utils/Log.h>
 
-#define TOUCHKEY_POWER "/sys/class/input/input1/enabled"
-#define SPEN_POWER "/sys/class/input/input18/enabled"
-#define TSP_POWER "/sys/class/input/input2/enabled"
-#define LCD_POWER "/sys/class/power_supply/battery/lcd"
+/* touchkeys */
+#define TK_POWER "/sys/class/input/input1/enabled"
+
+/* touchscreen */
+#define TS_POWER "/sys/class/input/input2/enabled"
 
 static void sysfs_write(char *path, char *s) {
     char buf[80];
@@ -48,10 +49,8 @@ static void sysfs_write(char *path, char *s) {
 
 void power_set_interactive_ext(int on) {
     ALOGD("%s: %s input devices", __func__, on ? "enabling" : "disabling");
-    sysfs_write(TSP_POWER, on ? "1" : "0");
-    sysfs_write(TOUCHKEY_POWER, on ? "1" : "0");
-    sysfs_write(SPEN_POWER, on ? "1" : "0");
-    sysfs_write(LCD_POWER, on ? "1" : "0");
+    sysfs_write(TK_POWER, on ? "1" : "0");
+    sysfs_write(TS_POWER, on ? "1" : "0");
 }
 
 void cm_power_set_interactive_ext(int on) {
